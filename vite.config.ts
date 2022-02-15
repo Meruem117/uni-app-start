@@ -9,7 +9,7 @@ export default defineConfig({
     WindiCSS({
       scan: {
         dirs: ['.'],
-        fileExtensions: ['vue', 'js', 'ts']
+        fileExtensions: ['vue']
       }
     })
   ]
