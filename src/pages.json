@@ -2,14 +2,24 @@
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
-			"navigationBarTitleText": "uni-app"
+			"navigationBarTitleText": "我的新北"
+		}
+	}, {
+		"path": "pages/work/index",
+		"style": {
+			"navigationBarTitleText": "重点热点工作"
+		}
+	}, {
+		"path": "pages/work/detail/index",
+		"style": {
+			"navigationBarTitleText": "重点热点工作详情"
 		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F3F4F6"
 	},
 	"easycom": {
 		"autoscan": true,
