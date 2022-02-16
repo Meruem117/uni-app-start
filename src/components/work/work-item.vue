@@ -1,20 +1,20 @@
 <template>
-  <view class="base_item" @click="toWorkDetail">
-    <view class="base_p" style="width: 120rpx;">
-      <view class="base_icon">
+  <view class="g_item" @click="toWorkDetail">
+    <view class="g_p_10" style="width: 120rpx;">
+      <view class="g_icon">
         <uni-icons type="star" size="30" class="m-auto"></uni-icons>
       </view>
     </view>
-    <view class="flex flex-col base_p" style="width: 520rpx;">
-      <view class="base_head">{{ props.item.title }}</view>
-      <view class="base_mt">{{ props.item.description }}</view>
-      <view class="flex justify-start base_mt">
+    <view class="flex flex-col g_p_10" style="width: 520rpx;">
+      <view class="g_text_35">{{ props.item.title }}</view>
+      <view class="g_mt_10 g_text_30">{{ props.item.description }}</view>
+      <view class="flex justify-start g_mt_10">
         <uni-icons type="circle" size="15" color="#9CA3AF"></uni-icons>
-        <view class="text-gray-400 base_ml">{{ props.item.time }}</view>
+        <view class="text-gray-400 g_ml_15 g_text_30">{{ props.item.time }}</view>
       </view>
     </view>
-    <view class="flex justify-end base_p" style="width: 40rpx;">
-      <uni-icons type="forward" size="20" color="#9CA3AF"></uni-icons>
+    <view class="flex justify-end g_p_10" style="width: 40rpx;">
+      <uni-icons type="forward" size="20rpx" color="#9CA3AF"></uni-icons>
     </view>
   </view>
 </template>

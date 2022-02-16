@@ -1,10 +1,10 @@
 <template>
-  <view class="flex base_p border_bottom" style="width: 710rpx;">
+  <view class="flex g_p_10 border_bottom" style="width: 710rpx;">
     <uni-icons type="home-filled" size="30"></uni-icons>
-    <view class="flex flex-col base_ml">
+    <view class="flex flex-col g_ml_15">
       <view style="font-size: 30rpx;">{{ props.item.name }}</view>
-      <view class="base_info">服务: {{ props.item.service }}</view>
-      <view class="flex base_info">
+      <view class="g_info">服务: {{ props.item.service }}</view>
+      <view class="flex g_info">
         <view>电话:&nbsp;</view>
         <view class="flex flex-col">
           <view v-for="tel in props.item.tels" :key="tel" class="flex">
@@ -13,7 +13,7 @@
           </view>
         </view>
       </view>
-      <view class="base_info">地址: {{ props.item.location }}</view>
+      <view class="g_info">地址: {{ props.item.location }}</view>
     </view>
   </view>
 </template>

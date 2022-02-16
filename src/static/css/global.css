@@ -1,38 +1,68 @@
-.base_title {
+.g_text_45 {
   font-size: 45rpx;
 }
 
-.base_head {
+.g_text_35 {
   font-size: 35rpx;
 }
 
-.base_p {
-  padding: 20rpx;
+.g_text_30 {
+  font-size: 30rpx;
 }
 
-.base_mt {
+.g_text_25 {
+  font-size: 25rpx;
+}
+
+.g_p_10 {
+  padding: 10rpx;
+}
+
+.g_pt_15 {
+  padding-top: 15rpx;
+}
+
+.g_pb_10 {
+  padding-bottom: 10rpx;
+}
+
+.g_mt_10 {
   margin-top: 10rpx;
 }
 
-.base_ml {
+.g_mt_15 {
+  margin-top: 15rpx;
+}
+
+.g_ml_15 {
+  margin-left: 15rpx;
+}
+
+.g_ml_20 {
   margin-left: 20rpx;
 }
 
-.base_item {
+.g_box {
+  width: 680rpx;
+  padding: 10rpx;
+  @apply mx-auto;
+}
+
+.g_item {
   width: 680rpx;
   height: 200rpx;
   padding: 10rpx;
-  margin-top: 15rpx;
+  margin-bottom: 15rpx;
   @apply flex mx-auto bg-white shadow-lg;
 }
 
-.base_icon {
+.g_icon {
   width: 80rpx;
   height: 80rpx;
   @apply flex mx-auto rounded-full shadow-md shadow-blue-400;
 }
 
-.base_info {
+.g_info {
   font-size: 25rpx;
   margin-top: 15rpx;
   @apply text-gray-400;

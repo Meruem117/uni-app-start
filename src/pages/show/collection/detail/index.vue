@@ -1,7 +1,7 @@
 <template>
-  <view class="flex flex-col base_p">
-    <view class="text-center base_title base_mt">{{ state.data.title }}</view>
-    <view class="text-center text-gray-400 base_mt">发布日期: {{ state.data.time }}</view>
+  <view class="flex flex-col g_p_10">
+    <view class="text-center g_text_45 g_mt_15">{{ state.data.title }}</view>
+    <view class="text-center text-gray-400 g_mt_15">发布日期: {{ state.data.time }}</view>
   </view>
 </template>
 

@@ -1,16 +1,16 @@
 <template>
-  <view class="base_item" @click="toPeopleDetail">
-    <view class="base_p" style="width: 120rpx;">
-      <view class="base_icon">
+  <view class="g_item" @click="toPeopleDetail">
+    <view class="g_p_10" style="width: 120rpx;">
+      <view class="g_icon">
         <uni-icons type="person-filled" size="30" class="m-auto"></uni-icons>
       </view>
     </view>
-    <view class="flex flex-col base_p" style="width: 520rpx;">
-      <view class="base_head">{{ props.item.name }}</view>
-      <view class="base_mt">{{ props.item.description }}</view>
-      <view class="base_mt">{{ props.item.job }}</view>
+    <view class="flex flex-col g_p_10" style="width: 520rpx;">
+      <view class="g_text_35">{{ props.item.name }}</view>
+      <view class="g_mt_10 g_text_30">{{ props.item.description }}</view>
+      <view class="g_mt_10 g_text_30">{{ props.item.job }}</view>
     </view>
-    <view class="flex justify-end base_p" style="width: 40rpx;">
+    <view class="flex justify-end g_p_10" style="width: 40rpx;">
       <uni-icons type="forward" size="20" color="#9CA3AF"></uni-icons>
     </view>
   </view>

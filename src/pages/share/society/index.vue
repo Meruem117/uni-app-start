@@ -1,8 +1,8 @@
 <template>
-  <view class="flex flex-col mx-auto shadow-md base_p" style="width: 730rpx;">
-    <view class="flex bg-gradient-to-r from-blue-200 to-white base_p">
+  <view class="flex flex-col mx-auto shadow-md g_p_10" style="width: 730rpx;">
+    <view class="flex bg-gradient-to-r from-blue-200 to-white g_p_10">
       <uni-icons type="home-filled" size="30"></uni-icons>
-      <view class="base_ml">便民热线</view>
+      <view class="g_ml_15">便民热线</view>
     </view>
     <view class="flex flex-col">
       <contactItemVue v-for="item in state.data" :key="item.id" :item="item" />

@@ -1,7 +1,7 @@
 <template>
-  <view class="flex flex-col base_p">
-    <view class="text-center base_title">党建联盟简介</view>
-    <view class="base_mt">{{ state.content }}</view>
+  <view class="flex flex-col g_p_10">
+    <view class="text-center g_text_45">党建联盟简介</view>
+    <view class="g_mt_15 g_p_10">{{ state.content }}</view>
   </view>
 </template>
 

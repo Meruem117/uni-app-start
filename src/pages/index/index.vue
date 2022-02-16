@@ -1,52 +1,42 @@
 <template>
-  <view class="flex flex-col bg-gradient-to-b from-blue-400 to-white base_p">
-    <!-- part 1.1 -->
-    <view class="flex" style="padding:50rpx;">
-      <view class="bg-white rounded-xl base_p" style="margin-right: 30rpx;">
+  <!-- 1 -->
+  <view class="bg-gradient-to-b from-blue-400 to-white">
+    <!-- 1.1 -->
+    <view class="flex g_box" style="padding:40rpx;">
+      <view class="bg-white rounded-xl g_p_10">
         <uni-icons type="heart-filled" size="30" color="red" class="m-auto"></uni-icons>
       </view>
-      <view class="my-auto text-white font-medium base_title">国宾社区</view>
+      <view class="my-auto text-white g_text_45 g_ml_15">国宾社区</view>
     </view>
-    <!-- part 1.2 -->
-    <view class="flex mx-auto rounded-md bg-white shadow-md base_box">
-      <view class="flex justify-center" style="width:190rpx;">
-        <view class="my-auto" style="font-size: 35rpx;">社区</view>
-        <view
-          class="my-auto text-white rounded-md bg-blue-400"
-          style="padding: 5rpx;margin-left: 5rpx;font-size: 30rpx;"
-        >公告</view>
+    <!-- 1.2 -->
+    <view class="flex bg-white rounded-md shadow-md g_box g_text_30">
+      <view class="flex justify-center" style="width:180rpx;">
+        <view class="my-auto">社区</view>
+        <view class="my-auto text-white rounded-md bg-blue-400 g_p_10 g_ml_15">公告</view>
       </view>
-      <view
-        class="my-auto text-gray-500"
-        style="width: 395rpx;font-size: 30rpx;"
-      >· {{ state.notice }}</view>
-      <view
-        class="my-auto text-center text-gray-500 border_left"
-        style="width: 110rpx;font-size: 30rpx;"
-      >更多</view>
+      <view class="my-auto text-gray-500" style="width: 400rpx;">· {{ state.notice }}</view>
+      <view class="my-auto text-center text-gray-500 border_left" style="width: 100rpx;">更多</view>
     </view>
   </view>
-  <!-- part 2 -->
-  <view class="flex flex-col mx-auto base_box">
-    <view class="base_jump" style="width: 675rpx;" @click="toCommunist">党员之家</view>
-    <view class="base_jump" style="width: 675rpx;" @click="toShare">参与日常活动和主题服务</view>
-    <view class="flex w-full">
-      <view class="base_jump" style="width: 325rpx;" @click="toShow">活动和先锋人物</view>
-      <view class="base_jump base_ml" style="width: 325rpx;">家园概况</view>
+  <!-- 2 -->
+  <view class="flex flex-col g_text_30">
+    <view class="jump_full" @click="toCommunist">党员之家</view>
+    <view class="jump_full" @click="toShare">参与日常活动和主题服务</view>
+    <view class="flex justify-center">
+      <view class="jump_half" @click="toShow">活动和先锋人物</view>
+      <view class="jump_half g_ml_15">家园概况</view>
     </view>
   </view>
-  <!-- part 3 -->
-  <view class="flex base_box">
-    <view
-      class="text-blue-400 font-semibold border-solid border-b-3 border-t-transparent border-l-transparent border-r-transparent border-blue-400 base_ml"
-      style="width: 220rpx;font-size: 35rpx;padding-bottom: 10rpx;"
-    >重点热点工作</view>
+  <!-- 3 -->
+  <view class="flex g_box g_mt_15">
+    <view class="text-blue-400 border_bottom g_pb_10 g_text_30" style="width: 180rpx;">重点热点工作</view>
     <view class="flex justify-end" style="width: 475rpx;" @click="toWork">
-      <view class="my-auto text-gray-400">查看更多</view>
+      <view class="my-auto text-gray-400 g_text_25">查看更多</view>
       <uni-icons type="forward" size="15" color="#9CA3AF" class="my-auto"></uni-icons>
     </view>
   </view>
-  <view class="flex flex-col" style="padding-bottom: 30rpx;">
+  <!-- 4 -->
+  <view class="flex flex-col">
     <workItemVue v-for="item in state.data" :key="item.id" :item="item" />
   </view>
 </template>
@@ -94,14 +84,18 @@ function toWork() {
 </script>
 
 <style scoped>
-.base_box {
-  width: 695rpx;
-  padding: 10rpx;
-}
-
-.base_jump {
+.jump_full {
+  width: 680rpx;
   height: 180rpx;
   margin-top: 25rpx;
+  padding: 10rpx;
+  @apply rounded-md shadow-md mx-auto;
+}
+
+.jump_half {
+  width: 325rpx;
+  height: 180rpx;
+  margin-top: 15rpx;
   padding: 10rpx;
   @apply rounded-md shadow-md;
 }
@@ -109,5 +103,10 @@ function toWork() {
 .border_left {
   @apply border-l border-solid border-gray-400;
   @apply border-t-transparent border-r-transparent border-b-transparent;
+}
+
+.border_bottom {
+  @apply border-b-3 border-solid border-blue-400;
+  @apply border-t-transparent border-l-transparent border-r-transparent;
 }
 </style>

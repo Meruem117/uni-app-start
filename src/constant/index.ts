@@ -1,7 +1,7 @@
-export const ACTIVITY_STATUS: { [key: number]: { text: string, type: string } } = {
-    0: { text: '可报名', type: 'error' },
-    1: { text: '活动中', type: 'default' },
-    2: { text: '已结束', type: 'default' },
+export const ACTIVITY_STATUS: { [key: number]: { text: string, color: string } } = {
+    0: { text: '可报名', color: 'text-orange-300 border-orange-300' },
+    1: { text: '活动中', color: 'text-gray-400 border-gray-400' },
+    2: { text: '已结束', color: 'text-gray-400 border-gray-400' }
 }
 
 export const STATUS_TYPE = {

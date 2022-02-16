@@ -1,6 +1,6 @@
 <template>
-  <view class="flex flex-col base_p">
-    <view class="text-center base_title base_mt">{{ state.data.name }}</view>
+  <view class="flex flex-col g_p_10">
+    <view class="text-center g_text_45 g_mt_15">{{ state.data.name }}</view>
   </view>
 </template>
 

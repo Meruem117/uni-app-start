@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col base_p">
+  <view class="flex flex-col g_p_10">
     <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
     <workItemVue v-for="item in state.data" :key="item.id" :item="item" />
   </view>
