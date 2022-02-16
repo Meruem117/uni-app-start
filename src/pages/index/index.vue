@@ -1,63 +1,92 @@
 <template>
-  <div class="flex flex-col pb-2 bg-gradient-to-b from-blue-400 to-white">
-    <div class="flex p-6">
-      <div class="bg-white rounded-xl p-1 mr-5">
-        <uni-icons type="heart-filled" size="30" color="red"></uni-icons>
-      </div>
-      <view class="text-xl text-white font-medium p-1">国宾社区</view>
-    </div>
-    <div class="flex h-10 mx-4 px-1 rounded-md bg-white shadow-md">
-      <view class="my-auto text-lg">社区</view>
-      <view class="my-auto ml-1 px-1 text-base text-white rounded-md bg-blue-400">公告</view>
-      <view class="my-auto ml-5 text-gray-500">· {{ state.notice }}</view>
+  <view class="flex flex-col bg-gradient-to-b from-blue-400 to-white base_p">
+    <!-- part 1.1 -->
+    <view class="flex" style="padding:50rpx;">
+      <view class="bg-white rounded-xl base_p" style="margin-right: 30rpx;">
+        <uni-icons type="heart-filled" size="30" color="red" class="m-auto"></uni-icons>
+      </view>
+      <view class="my-auto text-white font-medium base_title">国宾社区</view>
+    </view>
+    <!-- part 1.2 -->
+    <view class="flex mx-auto rounded-md bg-white shadow-md base_box">
+      <view class="flex justify-center" style="width:190rpx;">
+        <view class="my-auto" style="font-size: 35rpx;">社区</view>
+        <view
+          class="my-auto text-white rounded-md bg-blue-400"
+          style="padding: 5rpx;margin-left: 5rpx;font-size: 30rpx;"
+        >公告</view>
+      </view>
       <view
-        class="my-auto ml-5 pl-2 text-gray-500 border-t-transparent border-r-transparent border-b-transparent border-l border-solid border-gray-400"
+        class="my-auto text-gray-500"
+        style="width: 395rpx;font-size: 30rpx;"
+      >· {{ state.notice }}</view>
+      <view
+        class="my-auto text-center text-gray-500 border_left"
+        style="width: 110rpx;font-size: 30rpx;"
       >更多</view>
-    </div>
-  </div>
-  <div class="flex flex-col mx-4 mb-4">
-    <view class="base_jump w-full">党员之家</view>
-    <view class="base_jump w-full">参与日常活动和主题服务</view>
-    <div class="flex mt-4">
-      <view class="base_jump base_jump_small mr-4">活动和先锋人物</view>
-      <view class="base_jump base_jump_small">家园概况</view>
-    </div>
-  </div>
-  <div class="flex mx-4">
+    </view>
+  </view>
+  <!-- part 2 -->
+  <view class="flex flex-col mx-auto base_box">
+    <view class="base_jump" style="width: 675rpx;" @click="toCommunist">党员之家</view>
+    <view class="base_jump" style="width: 675rpx;" @click="toShare">参与日常活动和主题服务</view>
+    <view class="flex w-full">
+      <view class="base_jump" style="width: 325rpx;" @click="toShow">活动和先锋人物</view>
+      <view class="base_jump base_ml" style="width: 325rpx;">家园概况</view>
+    </view>
+  </view>
+  <!-- part 3 -->
+  <view class="flex base_box">
     <view
-      class="pb-1 text-blue-600 font-medium border-solid border-b-3 border-t-transparent border-l-transparent border-r-transparent border-blue-600"
+      class="text-blue-400 font-semibold border-solid border-b-3 border-t-transparent border-l-transparent border-r-transparent border-blue-400 base_ml"
+      style="width: 220rpx;font-size: 35rpx;padding-bottom: 10rpx;"
     >重点热点工作</view>
-    <div class="flex justify-end" style="width: 72%;" @click="toWork">
-      <view class="text-gray-400">查看更多</view>
-      <uni-icons type="forward" size="15" color="#9CA3AF"></uni-icons>
-    </div>
-  </div>
-  <div class="flex flex-col">
-    <workListItemVue v-for="item in state.data" :key="item.id" :item="item" />
-  </div>
+    <view class="flex justify-end" style="width: 475rpx;" @click="toWork">
+      <view class="my-auto text-gray-400">查看更多</view>
+      <uni-icons type="forward" size="15" color="#9CA3AF" class="my-auto"></uni-icons>
+    </view>
+  </view>
+  <view class="flex flex-col" style="padding-bottom: 30rpx;">
+    <workItemVue v-for="item in state.data" :key="item.id" :item="item" />
+  </view>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import workListItemVue from '@/components/work/work-list-item.vue'
+import workItemVue from '@/components/work/work-item.vue'
+import type { workItem } from '@/models'
 
-const state = reactive({
+type stateType = {
+  notice: string,
+  data: workItem[]
+}
+
+const state: stateType = reactive({
   notice: '十九大报告"综治新语"出炉!',
-  data: [
-    {
-      id: 1,
-      title: "xxxx",
-      description: "xxxxxxxx",
-      time: "xxxx-xx-xx",
-    },
-    {
-      id: 2,
-      title: "xxxx",
-      description: "xxxxxxxx",
-      time: "xxxx-xx-xx",
-    },
-  ]
+  data: [{
+    id: 1,
+    title: "xxxx",
+    description: "xxxxxxxx",
+    time: "xxxx-xx-xx",
+  }, {
+    id: 2,
+    title: "xxxx",
+    description: "xxxxxxxx",
+    time: "xxxx-xx-xx",
+  }]
 })
+
+function toCommunist() {
+  uni.navigateTo({ url: '/pages/communist/index' })
+}
+
+function toShare() {
+  uni.navigateTo({ url: '/pages/share/index' })
+}
+
+function toShow() {
+  uni.navigateTo({ url: '/pages/show/index' })
+}
 
 function toWork() {
   uni.navigateTo({ url: '/pages/work/index' })
@@ -65,14 +94,20 @@ function toWork() {
 </script>
 
 <style scoped>
-.base_jump {
-  @apply h-20;
-  @apply mt-4;
-  @apply rounded-md;
-  @apply shadow-md;
+.base_box {
+  width: 695rpx;
+  padding: 10rpx;
 }
 
-.base_jump_small {
-  width: 50%;
+.base_jump {
+  height: 180rpx;
+  margin-top: 25rpx;
+  padding: 10rpx;
+  @apply rounded-md shadow-md;
+}
+
+.border_left {
+  @apply border-l border-solid border-gray-400;
+  @apply border-t-transparent border-r-transparent border-b-transparent;
 }
 </style>
