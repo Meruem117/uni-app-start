@@ -16,7 +16,7 @@
   </view>
   <view class="g_box">
     <view class="g_text_35 g_mt_15 g_mb_15">全部评论</view>
-    <commentListVue />
+    <commentListVue :data="state.comments" />
   </view>
 </template>
 
@@ -26,12 +26,13 @@ import { onLoad } from '@dcloudio/uni-app'
 import baseInfoVue from '@/components/common/base-info.vue'
 import imageListVue from '@/components/common/image-list.vue'
 import commentListVue from '@/components/common/comment-list.vue'
-import type { activityItem } from '@/models'
+import type { activityItem, commentItem } from '@/models'
 import { STATUS_TYPE } from '@/constant'
 
 type stateType = {
   isParticipant: number,
-  data: activityItem
+  data: activityItem,
+  comments: commentItem[]
 }
 
 const state: stateType = reactive({
@@ -48,7 +49,41 @@ const state: stateType = reactive({
     restrict: 50,
     content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     images: []
-  }
+  },
+  comments: [{
+    id: 1,
+    userId: 1,
+    name: 'xxx',
+    avatar: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+    content: 'xxxxxxxx',
+    like: 50,
+    time: 'xxxx-xx-xx',
+    children: [{
+      id: 2,
+      userId: 1,
+      name: 'xxx',
+      avatar: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      content: 'xxxxxxxx',
+      like: 50,
+      time: 'xxxx-xx-xx',
+    }, {
+      id: 3,
+      userId: 1,
+      name: 'xxx',
+      avatar: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      content: 'xxxxxxxx',
+      like: 50,
+      time: 'xxxx-xx-xx',
+    }]
+  }, {
+    id: 4,
+    userId: 1,
+    name: 'xxx',
+    avatar: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+    content: 'xxxxxxxx',
+    like: 50,
+    time: 'xxxx-xx-xx',
+  }]
 })
 
 onLoad(option => {
@@ -62,6 +97,6 @@ onLoad(option => {
   height: 80rpx;
   font-size: 35rpx;
   margin-top: 40rpx;
-  @apply rounded-3xl;
+  border-radius: 80rpx;
 }
 </style>

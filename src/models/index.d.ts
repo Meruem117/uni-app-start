@@ -44,3 +44,24 @@ export interface peopleItem {
   images: string[],
   video: string
 }
+
+interface baseCommentItem {
+  id: number,
+  userId: number,
+  name: string,
+  avatar: string,
+  content: string,
+  like: number,
+  time: string,
+}
+
+export interface commentItem {
+  id: number,
+  userId: number,
+  name: string,
+  avatar: string,
+  content: string,
+  like: number,
+  time: string,
+  children?: baseCommentItem[]
+}

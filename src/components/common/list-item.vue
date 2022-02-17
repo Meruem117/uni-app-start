@@ -10,7 +10,7 @@
             <slot name="body"></slot>
         </view>
         <view class="flex justify-end g_p_10" style="width: 40rpx;">
-            <uni-icons type="forward" size="20rpx" color="#9CA3AF"></uni-icons>
+            <uni-icons type="forward" size="25" color="#9CA3AF"></uni-icons>
         </view>
     </view>
 </template>

@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { activityItem } from '@/models'
+import type { activityItem } from '@/models'
 import { ACTIVITY_STATUS, IS_PARTICIPANT } from '@/constant'
 
 type propsType = {
