@@ -18,6 +18,12 @@
     <view class="g_text_35 g_mt_15 g_mb_15">全部评论</view>
     <commentListVue :data="state.comments" />
   </view>
+  <view class="flex bg-gray-100 g_p_10 g_mt_15">
+    <input class="my-auto bg-white g_input g_ml_20" :value="state.input" placeholder="想对你说些什么" />
+    <view class="my-auto g_text_25 g_ml_20">发表</view>
+    <uni-icons type="hand-up-filled" size="25" color="#9CA3AF" class="my-auto g_ml_15"></uni-icons>
+    <view class="my-auto text-gray-400">0</view>
+  </view>
 </template>
 
 <script setup lang="ts">
@@ -32,7 +38,8 @@ import { STATUS_TYPE } from '@/constant'
 type stateType = {
   isParticipant: number,
   data: activityItem,
-  comments: commentItem[]
+  comments: commentItem[],
+  input: string
 }
 
 const state: stateType = reactive({
@@ -48,7 +55,11 @@ const state: stateType = reactive({
     total: 40,
     restrict: 50,
     content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    images: []
+    images: [
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg'
+    ]
   },
   comments: [{
     id: 1,
@@ -83,7 +94,8 @@ const state: stateType = reactive({
     content: 'xxxxxxxx',
     like: 50,
     time: 'xxxx-xx-xx',
-  }]
+  }],
+  input: ''
 })
 
 onLoad(option => {

@@ -32,7 +32,7 @@ export interface collectionItem {
   id: number,
   title: string,
   time: string,
-  image: string
+  images: string[]
 }
 
 export interface peopleItem {

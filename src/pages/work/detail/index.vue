@@ -20,7 +20,11 @@ const state: { data: workItem } = reactive({
     title: 'xxxx',
     description: 'xxxxxxxx',
     time: 'xxxx-xx-xx',
-    images: []
+    images: [
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg',
+      'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg'
+    ]
   }
 })
 

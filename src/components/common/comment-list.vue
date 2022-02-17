@@ -28,10 +28,10 @@
                 </view>
             </view>
             <!-- footer -->
-            <view class="flex">
+            <view class="flex g_mt_15">
                 <view class="g_text_25 time">{{ item.time }}</view>
                 <view class="text-gray-400 g_text_25">回复</view>
-                <view class="text-gray-400 g_text_25 g_ml_15">查看更多</view>
+                <view class="text-gray-400 g_text_25 g_ml_20">查看更多</view>
             </view>
         </view>
     </view>
@@ -65,7 +65,7 @@ const props = defineProps<{ data: commentItem[] }>()
 }
 
 .time {
-    width: 420rpx;
+    width: 450rpx;
     margin-left: 30rpx;
 }
 </style>

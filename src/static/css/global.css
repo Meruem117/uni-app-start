@@ -91,3 +91,10 @@
   margin-top: 15rpx;
   @apply text-gray-400;
 }
+
+.g_input {
+  width: 520rpx;
+  height: 60rpx;
+  border-radius: 80rpx;
+  padding-left: 20rpx;
+}
