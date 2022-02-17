@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col mx-auto shadow-md g_p_10" style="width: 730rpx;">
+  <view class="flex flex-col shadow-md g_box g_mt_15">
     <view class="flex bg-gradient-to-r from-blue-200 to-white g_p_10">
       <uni-icons type="home-filled" size="30"></uni-icons>
       <view class="g_ml_15">便民热线</view>

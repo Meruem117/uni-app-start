@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col g_p_10">
+  <view class="flex flex-col g_box g_mt_15">
     <view class="text-center g_text_45">党建联盟简介</view>
     <view class="g_mt_15 g_p_10">{{ state.content }}</view>
   </view>

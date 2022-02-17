@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col mx-auto g_p_10" style="width: 695rpx;">
+  <view class="flex flex-col g_box">
     <view class="g_text_45">{{ state.data.title }}</view>
     <view class="flex g_info">
       活动类型:&nbsp;
@@ -24,11 +24,7 @@
       </view>
       <view v-if="state.data.status === STATUS_TYPE.END">
         <view class="g_text_35 g_mt_15">精彩影集</view>
-        <view class="flex justify-center g_mt_15 g_pt_15">
-          <image class="rounded-lg" style="width:215rpx; height:160rpx;" :src="state.src" />
-          <image class="rounded-lg g_ml_20" style="width:215rpx; height:160rpx;" :src="state.src" />
-          <image class="rounded-lg g_ml_20" style="width:215rpx; height:160rpx;" :src="state.src" />
-        </view>
+        <imageListVue :images="state.data.images" />
       </view>
     </view>
     <view v-else>
@@ -40,13 +36,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
+import imageListVue from '@/components/common/image-list.vue'
 import type { activityItem } from '@/models'
 import { ACTIVITY_STATUS, STATUS_TYPE, IS_PARTICIPANT } from '@/constant'
 
 type stateType = {
   isParticipant: number,
-  data: activityItem,
-  src: string
+  data: activityItem
 }
 
 const state: stateType = reactive({
@@ -63,8 +59,7 @@ const state: stateType = reactive({
     restrict: 50,
     content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     images: []
-  },
-  src: 'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/6acec660-4f31-11eb-a16f-5b3e54966275.jpg'
+  }
 })
 
 onLoad(option => {

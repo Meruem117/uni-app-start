@@ -3,6 +3,7 @@ export interface workItem {
   title: string,
   description: string,
   time: string,
+  images: string[]
 }
 
 export interface activityItem {

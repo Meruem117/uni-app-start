@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col mx-auto g_p_10" style="width: 695rpx;">
+  <view class="flex flex-col g_box">
     <view class="g_text_45">{{ state.data.title }}</view>
     <view class="flex g_info">
       活动类型:&nbsp;

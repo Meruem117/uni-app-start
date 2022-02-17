@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col mx-auto g_p_10" style="width: 695rpx;">
+  <view class="flex flex-col g_box g_mt_15">
     <view class="base_jump" style="width: 675rpx;">党建品牌</view>
     <view class="flex w-full">
       <view class="base_jump" style="width: 325rpx;" @click="toActivity">党建活动</view>

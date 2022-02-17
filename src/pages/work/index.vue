@@ -36,16 +36,19 @@ const state: stateType = reactive({
     title: "xxxx",
     description: "xxxxxxxx",
     time: "xxxx-xx-xx",
+    images: []
   }, {
     id: 2,
     title: "xxxx",
     description: "xxxxxxxx",
     time: "xxxx-xx-xx",
+    images: []
   }, {
     id: 3,
     title: "xxxx",
     description: "xxxxxxxx",
     time: "xxxx-xx-xx",
+    images: []
   }]
 })
 

@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col g_p_10">
+  <view class="flex flex-col g_box">
     <view class="text-center g_text_45 g_mt_15">{{ state.data.name }}</view>
   </view>
 </template>
