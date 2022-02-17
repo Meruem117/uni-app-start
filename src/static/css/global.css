@@ -34,6 +34,14 @@
   margin-top: 15rpx;
 }
 
+.g_mt_20 {
+  margin-top: 20rpx;
+}
+
+.g_mb_15 {
+  margin-bottom: 15rpx;
+}
+
 .g_ml_15 {
   margin-left: 15rpx;
 }
@@ -56,6 +64,22 @@
   @apply flex mx-auto bg-white shadow-lg;
 }
 
+.g_jump_full {
+  width: 680rpx;
+  height: 180rpx;
+  margin-top: 25rpx;
+  padding: 10rpx;
+  @apply rounded-md shadow-md mx-auto;
+}
+
+.g_jump_half {
+  width: 325rpx;
+  height: 180rpx;
+  margin-top: 25rpx;
+  padding: 10rpx;
+  @apply rounded-md shadow-md;
+}
+
 .g_icon {
   width: 80rpx;
   height: 80rpx;
@@ -63,7 +87,7 @@
 }
 
 .g_info {
-  font-size: 25rpx;
+  font-size: 30rpx;
   margin-top: 15rpx;
   @apply text-gray-400;
 }

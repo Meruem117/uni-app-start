@@ -1,26 +1,9 @@
 <template>
   <view class="flex flex-col g_box">
-    <view class="g_text_45">{{ state.data.title }}</view>
-    <view class="flex g_info">
-      活动类型:&nbsp;
-      <view class="text-orange-600">{{ state.data.type }}</view>
-    </view>
-    <view class="g_info">活动时间: {{ state.data.startTime }} ~ {{ state.data.endTime }}</view>
-    <view class="g_info">活动地址: {{ state.data.title }}</view>
-    <view class="g_info">活动状态: {{ ACTIVITY_STATUS[state.data.status].text }}</view>
-    <view class="flex">
-      <view class="g_info" style="width: 225rpx;">已报人数: {{ state.data.total }}人</view>
-      <view class="g_info" style="width: 225rpx;">限额人数: {{ state.data.restrict }}人</view>
-      <button
-        size="mini"
-        class="text-white g_ml_15 g_text_25"
-        :class="IS_PARTICIPANT[state.isParticipant].color"
-      >{{ IS_PARTICIPANT[state.isParticipant].text }}</button>
-    </view>
-    <view class="g_mt_15">{{ state.data.content }}</view>
+    <baseInfoVue :isParticipant="state.isParticipant" :data="state.data" />
     <view v-if="state.isParticipant" class="g_mt_15">
       <view v-if="state.data.status === STATUS_TYPE.START">
-        <button class="text-white bg-blue-400 base_button">我要打卡</button>
+        <button class="text-white bg-blue-400 g_text_30 base_button">我要打卡</button>
       </view>
       <view v-if="state.data.status === STATUS_TYPE.END">
         <view class="g_text_35 g_mt_15">精彩影集</view>
@@ -28,17 +11,23 @@
       </view>
     </view>
     <view v-else>
-      <button class="text-white bg-orange-400 base_button">我要报名</button>
+      <button class="text-white bg-orange-400 g_text_30 base_button">我要报名</button>
     </view>
+  </view>
+  <view class="g_box">
+    <view class="g_text_35 g_mt_15 g_mb_15">全部评论</view>
+    <commentListVue />
   </view>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
+import baseInfoVue from '@/components/common/base-info.vue'
 import imageListVue from '@/components/common/image-list.vue'
+import commentListVue from '@/components/common/comment-list.vue'
 import type { activityItem } from '@/models'
-import { ACTIVITY_STATUS, STATUS_TYPE, IS_PARTICIPANT } from '@/constant'
+import { STATUS_TYPE } from '@/constant'
 
 type stateType = {
   isParticipant: number,
@@ -51,7 +40,7 @@ const state: stateType = reactive({
     id: 0,
     title: 'xxxx',
     type: 'xxx',
-    status: 2,
+    status: 1,
     startTime: 'xxxx-xx-xx',
     endTime: 'xxxx-xx-xx',
     location: 'xxxxxxx',

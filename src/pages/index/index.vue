@@ -6,7 +6,7 @@
       <view class="bg-white rounded-xl g_p_10">
         <uni-icons type="heart-filled" size="30" color="red" class="m-auto"></uni-icons>
       </view>
-      <view class="my-auto text-white g_text_45 g_ml_15">国宾社区</view>
+      <view class="my-auto text-white g_text_45 g_ml_20">国宾社区</view>
     </view>
     <!-- 1.2 -->
     <view class="flex bg-white rounded-md shadow-md g_box g_text_30">
@@ -20,11 +20,11 @@
   </view>
   <!-- 2 -->
   <view class="flex flex-col g_text_30">
-    <view class="jump_full" @click="toCommunist">党员之家</view>
-    <view class="jump_full" @click="toShare">参与日常活动和主题服务</view>
+    <view class="g_jump_full" @click="toCommunist">党员之家</view>
+    <view class="g_jump_full" @click="toShare">参与日常活动和主题服务</view>
     <view class="flex justify-center">
-      <view class="jump_half" @click="toShow">活动和先锋人物</view>
-      <view class="jump_half g_ml_15">家园概况</view>
+      <view class="g_jump_half" @click="toShow">活动和先锋人物</view>
+      <view class="g_jump_half g_ml_15">家园概况</view>
     </view>
   </view>
   <!-- 3 -->
@@ -100,22 +100,6 @@ function toWork() {
 </script>
 
 <style scoped>
-.jump_full {
-  width: 680rpx;
-  height: 180rpx;
-  margin-top: 25rpx;
-  padding: 10rpx;
-  @apply rounded-md shadow-md mx-auto;
-}
-
-.jump_half {
-  width: 325rpx;
-  height: 180rpx;
-  margin-top: 15rpx;
-  padding: 10rpx;
-  @apply rounded-md shadow-md;
-}
-
 .border_left {
   @apply border-l border-solid border-gray-400;
   @apply border-t-transparent border-r-transparent border-b-transparent;

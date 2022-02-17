@@ -11,6 +11,6 @@ export const STATUS_TYPE = {
 }
 
 export const IS_PARTICIPANT: { [key: number]: { text: string, color: string } } = {
-    0: { text: '未报名用户', color: 'bg-red-400' },
-    1: { text: '已报名用户', color: 'bg-blue-400' }
+    0: { text: '未报名人员', color: 'bg-red-400' },
+    1: { text: '已报名人员', color: 'bg-blue-400' }
 }

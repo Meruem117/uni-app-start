@@ -2,7 +2,7 @@
     <view class="g_item" @click="toDetail">
         <view class="g_p_10" style="width: 120rpx;">
             <view class="g_icon">
-                <uni-icons :type="props.icon" size="30" class="m-auto"></uni-icons>
+                <uni-icons :type="props.icon" size="25" class="m-auto"></uni-icons>
             </view>
         </view>
         <view class="flex flex-col g_p_10" style="width: 520rpx;">
@@ -16,11 +16,13 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+type propsType = {
     icon: string,
     title: string,
     link: string
-}>()
+}
+
+const props = defineProps<propsType>()
 
 function toDetail() {
     uni.navigateTo({ url: props.link })
