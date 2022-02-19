@@ -9,14 +9,14 @@
   </view>
   <view class="flex flex-col g_box">
     <view class="g_text_30 g_mt_15">相关图片</view>
-    <imageListVue :images="state.data.images" />
+    <ImageList :images="state.data.images" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import imageListVue from '@/components/common/image-list.vue'
+import ImageList from '@/components/common/ImageList.vue'
 import type { peopleItem } from '@/models'
 
 const state: { data: peopleItem } = reactive({

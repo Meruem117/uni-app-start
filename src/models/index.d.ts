@@ -55,13 +55,6 @@ interface baseCommentItem {
   time: string,
 }
 
-export interface commentItem {
-  id: number,
-  userId: number,
-  name: string,
-  avatar: string,
-  content: string,
-  like: number,
-  time: string,
+export interface commentItem extends baseCommentItem {
   children?: baseCommentItem[]
 }

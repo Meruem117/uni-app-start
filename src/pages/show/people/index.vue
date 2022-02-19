@@ -1,7 +1,7 @@
 <template>
   <view class="flex flex-col g_p_10">
     <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
-    <listItemVue
+    <ListItem
       v-for="item in state.data"
       :key="item.id"
       icon="person-filled"
@@ -12,13 +12,13 @@
         <view class="g_mt_10 g_text_30">{{ item.description }}</view>
         <view class="g_mt_10 g_text_30">{{ item.job }}</view>
       </template>
-    </listItemVue>
+    </ListItem>
   </view>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import listItemVue from '@/components/common/list-item.vue'
+import ListItem from '@/components/common/ListItem.vue'
 import type { peopleItem } from '@/models'
 
 type stateType = {

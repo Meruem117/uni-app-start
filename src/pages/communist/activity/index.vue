@@ -1,13 +1,13 @@
 <template>
   <view class="flex flex-col g_p_10">
     <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
-    <activityItemVue v-for="item in state.data" :key="item.id" :item="item" />
+    <ActivityItem v-for="item in state.data" :key="item.id" :item="item" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import activityItemVue from '@/components/communist/activity-item.vue'
+import ActivityItem from '@/components/communist/ActivityItem.vue'
 import type { activityItem } from '@/models'
 
 type stateType = {

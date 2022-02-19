@@ -4,8 +4,8 @@
     <view class="text-center text-gray-400 g_mt_15">发布日期: {{ state.data.time }}</view>
     <swiper class="w-full g_mt_15" indicator-dots="true">
       <swiper-item
-        v-for="(image, idnex) in state.data.images"
-        :key="idnex"
+        v-for="(image, index) in state.data.images"
+        :key="index"
         class="flex justify-center"
       >
         <image class="image" :src="image" />
@@ -14,7 +14,7 @@
   </view>
   <view class="g_box">
     <view class="g_text_35 g_mt_15 g_mb_15">全部评论</view>
-    <commentListVue :data="state.comments" />
+    <CommentList :data="state.comments" />
   </view>
   <view class="flex bg-gray-100 g_p_10 g_mt_15">
     <input class="my-auto bg-white g_input g_ml_20" :value="state.input" placeholder="想对你说些什么" />
@@ -27,16 +27,16 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import commentListVue from '@/components/common/comment-list.vue'
+import CommentList from '@/components/common/CommentList.vue'
 import type { collectionItem, commentItem } from '@/models'
 
-type statetType = {
+type stateType = {
   data: collectionItem,
   comments: commentItem[],
   input: string
 }
 
-const state: statetType = reactive({
+const state: stateType = reactive({
   data: {
     id: 0,
     title: 'xxxx',

@@ -5,7 +5,7 @@
       <view class="my-auto g_text_30 g_ml_15">便民热线</view>
     </view>
     <view class="flex flex-col">
-      <contactItemVue v-for="item in state.data" :key="item.id" :item="item" />
+      <ContactItem v-for="item in state.data" :key="item.id" :item="item" />
     </view>
   </view>
   <view class="g_jump_full">事项上报</view>
@@ -16,7 +16,7 @@
       <view class="my-auto text-gray-400 g_text_25">查看更多</view>
     </view>
     <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
-    <commentListVue :data="state.comments" />
+    <CommentList :data="state.comments" />
   </view>
   <view class="flex bg-gray-100 g_p_10 g_mt_15">
     <input class="my-auto bg-white input g_ml_20" :value="state.input" placeholder="想对你说些什么" />
@@ -29,8 +29,8 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import contactItemVue from '@/components/share/contact-item.vue'
-import commentListVue from '@/components/common/comment-list.vue'
+import ContactItem from '@/components/share/ContactItem.vue'
+import CommentList from '@/components/common/CommentList.vue'
 import type { contactItem, commentItem } from '@/models'
 
 type stateType = {

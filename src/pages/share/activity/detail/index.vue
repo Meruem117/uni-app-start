@@ -1,8 +1,8 @@
 <template>
   <view class="flex flex-col g_box">
-    <baseInfoVue :isParticipant="state.isParticipant" :data="state.data" />
+    <BaseInfo :isParticipant="state.isParticipant" :data="state.data" />
     <view class="g_text_30 g_mt_15">精彩影集</view>
-    <imageListVue :images="state.data.images" />
+    <ImageList :images="state.data.images" />
   </view>
   <view class="flex flex-col g_box">
     <view class="g_text_30 g_mt_15">精彩视频</view>
@@ -13,7 +13,7 @@
   </view>
   <view class="g_box">
     <view class="g_text_35 g_mt_15 g_mb_15">全部评论</view>
-    <commentListVue :data="state.comments" />
+    <CommentList :data="state.comments" />
   </view>
   <view class="flex bg-gray-100 g_p_10 g_mt_15">
     <input class="my-auto bg-white g_input g_ml_20" :value="state.input" placeholder="想对你说些什么" />
@@ -26,9 +26,9 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import baseInfoVue from '@/components/common/base-info.vue'
-import imageListVue from '@/components/common/image-list.vue'
-import commentListVue from '@/components/common/comment-list.vue'
+import BaseInfo from '@/components/common/BaseInfo.vue'
+import ImageList from '@/components/common/ImageList.vue'
+import CommentList from '@/components/common/CommentList.vue'
 import type { activityItem, commentItem } from '@/models'
 
 interface shareActivityItem extends activityItem {
