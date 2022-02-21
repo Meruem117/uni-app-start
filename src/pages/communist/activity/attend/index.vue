@@ -1,6 +1,6 @@
 <template>
   <view class="flex flex-col g_box">
-    <BaseInfo :isParticipant="state.isParticipant" :data="state.data" />
+    <ActivityInfo :isParticipant="state.isParticipant" :data="state.data" />
     <view v-if="state.isParticipant" class="g_mt_15">
       <view v-if="state.data.status === STATUS_TYPE.START">
         <button class="text-white bg-blue-400 g_text_30 base_button">我要打卡</button>
@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import BaseInfo from '@/components/common/BaseInfo.vue'
+import ActivityInfo from '@/components/common/ActivityInfo.vue'
 import ImageList from '@/components/common/ImageList.vue'
 import CommentList from '@/components/common/CommentList.vue'
 import type { activityItem, commentItem } from '@/models'

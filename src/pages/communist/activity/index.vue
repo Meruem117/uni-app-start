@@ -1,24 +1,41 @@
 <template>
   <view class="flex flex-col g_p_10">
-    <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
+    <view class="flex bg-gray-100 text-sm text-gray-300 rounded g_p_10" style="margin: 20rpx;">
+      <view class="g_ml_15" @click="open">活动类型</view>
+      <uni-icons type="bottom" size="15" color="#D1D5DB"></uni-icons>
+      <view class="g_ml_15">|</view>
+      <input
+        class="text-black g_ml_15"
+        v-model="state.value"
+        placeholder="输入关键词搜索"
+        placeholder-class="text-sm text-gray-300"
+        style="width: 450rpx;"
+        @confirm="search"
+      />
+      <uni-icons type="search" size="20" color="#D1D5DB" class="my-auto" @click="search"></uni-icons>
+    </view>
+    <uni-popup ref="popup" type="bottom">底部弹出 Popup</uni-popup>
     <ActivityItem v-for="item in state.data" :key="item.id" :item="item" />
   </view>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import ActivityItem from '@/components/communist/ActivityItem.vue'
 import type { activityItem } from '@/models'
 
 type stateType = {
-  value: '',
-  type: '',
+  visible: boolean,
+  type: string,
+  value: string,
   data: activityItem[]
 }
 
+const popup = ref(null)
 const state: stateType = reactive({
-  value: '',
+  visible: false,
   type: '',
+  value: '',
   data: [{
     id: 1,
     title: 'xxxx',
@@ -57,6 +74,10 @@ const state: stateType = reactive({
     images: []
   }]
 })
+
+function open() {
+  popup.open()
+}
 
 function search() {
   console.log(state.value)

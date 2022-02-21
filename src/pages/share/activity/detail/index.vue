@@ -1,6 +1,6 @@
 <template>
   <view class="flex flex-col g_box">
-    <BaseInfo :isParticipant="state.isParticipant" :data="state.data" />
+    <ActivityInfo :isParticipant="state.isParticipant" :data="state.data" />
     <view class="g_text_30 g_mt_15">精彩影集</view>
     <ImageList :images="state.data.images" />
   </view>
@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { onLoad } from '@dcloudio/uni-app'
-import BaseInfo from '@/components/common/BaseInfo.vue'
+import ActivityInfo from '@/components/common/ActivityInfo.vue'
 import ImageList from '@/components/common/ImageList.vue'
 import CommentList from '@/components/common/CommentList.vue'
 import type { activityItem, commentItem } from '@/models'
