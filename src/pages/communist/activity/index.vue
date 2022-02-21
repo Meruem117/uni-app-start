@@ -14,7 +14,11 @@
       />
       <uni-icons type="search" size="20" color="#D1D5DB" class="my-auto" @click="search"></uni-icons>
     </view>
-    <uni-popup ref="popup" type="bottom">底部弹出 Popup</uni-popup>
+    <uni-popup ref="popup" type="bottom">
+      <picker @change="change" :value="state.type" :range="state.types">
+        <view>{{ state.types[state.type] }}</view>
+      </picker>
+    </uni-popup>
     <ActivityItem v-for="item in state.data" :key="item.id" :item="item" />
   </view>
 </template>
@@ -26,15 +30,17 @@ import type { activityItem } from '@/models'
 
 type stateType = {
   visible: boolean,
-  type: string,
+  type: number,
+  types: string[]
   value: string,
   data: activityItem[]
 }
 
-const popup = ref(null)
+const popup = ref()
 const state: stateType = reactive({
   visible: false,
-  type: '',
+  type: 0,
+  types: ['t1', 't2'],
   value: '',
   data: [{
     id: 1,
@@ -76,7 +82,11 @@ const state: stateType = reactive({
 })
 
 function open() {
-  popup.open()
+  popup.value.open()
+}
+
+function change() {
+  console.log(state.types[state.type])
 }
 
 function search() {
