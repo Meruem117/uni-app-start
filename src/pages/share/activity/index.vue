@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import listItemVue from '@/components/common/ListItem.vue'
+import ListItem from '@/components/common/ListItem.vue'
 import type { activityItem } from '@/models'
 
 type stateType = {

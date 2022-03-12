@@ -6,32 +6,32 @@
       <view class="bg-white rounded-xl g_p_10">
         <uni-icons type="heart-filled" size="30" color="red" class="m-auto"></uni-icons>
       </view>
-      <view class="my-auto text-white g_text_45 g_ml_20">国宾社区</view>
+      <view class="my-auto text-white g_text_45 g_ml_20">Uni App</view>
     </view>
     <!-- 1.2 -->
     <view class="flex bg-white rounded-md shadow-md g_box g_text_30">
       <view class="flex justify-center" style="width:180rpx;">
-        <view class="my-auto">社区</view>
-        <view class="my-auto text-white rounded-md bg-blue-400 g_p_10 g_ml_15">公告</view>
+        <!-- <view class="my-auto">Society</view> -->
+        <view class="my-auto text-white rounded-md bg-blue-400 g_p_10 g_ml_15">Notice</view>
       </view>
       <view class="my-auto text-gray-500" style="width: 400rpx;">· {{ state.notice }}</view>
-      <view class="my-auto text-center text-gray-500 border_left" style="width: 100rpx;">更多</view>
+      <view class="my-auto text-center text-gray-500 border_left" style="width: 100rpx;">More</view>
     </view>
   </view>
   <!-- 2 -->
   <view class="flex flex-col g_text_30">
-    <view class="g_jump_full" @click="toCommunist">党员之家</view>
-    <view class="g_jump_full" @click="toShare">参与日常活动和主题服务</view>
+    <view class="g_jump_full" @click="toCommunist">Communist</view>
+    <view class="g_jump_full" @click="toShare">Share</view>
     <view class="flex justify-center">
-      <view class="g_jump_half" @click="toShow">活动和先锋人物</view>
-      <view class="g_jump_half g_ml_15">家园概况</view>
+      <view class="g_jump_half" @click="toShow">Show</view>
+      <view class="g_jump_half g_ml_15">Introduction</view>
     </view>
   </view>
   <!-- 3 -->
   <view class="flex g_box g_mt_15">
-    <view class="text-blue-400 border_bottom g_pb_10 g_text_30" style="width: 180rpx;">重点热点工作</view>
+    <view class="text-blue-400 border_bottom g_pb_10 g_text_30" style="width: 180rpx;">Work</view>
     <view class="flex justify-end" style="width: 475rpx;" @click="toWork">
-      <view class="my-auto text-gray-400 g_text_25">查看更多</view>
+      <view class="my-auto text-gray-400 g_text_25">More</view>
       <uni-icons type="forward" size="15" color="#9CA3AF" class="my-auto"></uni-icons>
     </view>
   </view>
@@ -66,7 +66,7 @@ type stateType = {
 }
 
 const state: stateType = reactive({
-  notice: '十九大报告"综治新语"出炉!',
+  notice: 'xxxxxxxxxxxxxxxxxxxx',
   data: [{
     id: 1,
     title: "xxxx",

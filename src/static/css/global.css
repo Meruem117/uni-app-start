@@ -87,7 +87,7 @@
 }
 
 .g_info {
-  font-size: 30rpx;
+  font-size: 25rpx;
   margin-top: 15rpx;
   @apply text-gray-400;
 }

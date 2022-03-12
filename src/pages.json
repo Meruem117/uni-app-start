@@ -2,87 +2,87 @@
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
-			"navigationBarTitleText": "我的新北"
+			"navigationBarTitleText": "Uni App"
 		}
 	}, {
 		"path": "pages/work/index",
 		"style": {
-			"navigationBarTitleText": "重点热点工作"
+			"navigationBarTitleText": "Word"
 		}
 	}, {
 		"path": "pages/work/detail/index",
 		"style": {
-			"navigationBarTitleText": "重点热点工作详情"
+			"navigationBarTitleText": "Word Detail"
 		}
 	}, {
 		"path": "pages/communist/index",
 		"style": {
-			"navigationBarTitleText": "党员之家"
+			"navigationBarTitleText": "Communist"
 		}
 	}, {
 		"path": "pages/communist/friend/index",
 		"style": {
-			"navigationBarTitleText": "党建朋友圈"
+			"navigationBarTitleText": "Communist Friend"
 		}
 	}, {
 		"path": "pages/communist/activity/index",
 		"style": {
-			"navigationBarTitleText": "党建活动"
+			"navigationBarTitleText": "Communist Activity"
 		}
 	}, {
 		"path": "pages/communist/activity/attend/index",
 		"style": {
-			"navigationBarTitleText": "活动参与"
+			"navigationBarTitleText": "Communist Activity Attend"
 		}
 	}, {
 		"path": "pages/communist/introduction/index",
 		"style": {
-			"navigationBarTitleText": "详情"
+			"navigationBarTitleText": "Communist Introduction"
 		}
 	}, {
 		"path": "pages/share/index",
 		"style": {
-			"navigationBarTitleText": "睦邻驿站"
+			"navigationBarTitleText": "Share"
 		}
 	}, {
 		"path": "pages/share/activity/index",
 		"style": {
-			"navigationBarTitleText": "驿站特别活动"
+			"navigationBarTitleText": "Share Activity"
 		}
 	}, {
 		"path": "pages/share/activity/detail/index",
 		"style": {
-			"navigationBarTitleText": "驿站特别活动详情"
+			"navigationBarTitleText": "Share Activity Detail"
 		}
 	}, {
 		"path": "pages/share/society/index",
 		"style": {
-			"navigationBarTitleText": "社区便民帮"
+			"navigationBarTitleText": "Share Society"
 		}
 	}, {
 		"path": "pages/show/index",
 		"style": {
-			"navigationBarTitleText": "睦邻+全民秀场"
+			"navigationBarTitleText": "Show"
 		}
 	}, {
 		"path": "pages/show/collection/index",
 		"style": {
-			"navigationBarTitleText": "乐享集锦"
+			"navigationBarTitleText": "Show Collection"
 		}
 	}, {
 		"path": "pages/show/collection/detail/index",
 		"style": {
-			"navigationBarTitleText": "乐享集锦详情"
+			"navigationBarTitleText": "Show Collection Detail"
 		}
 	}, {
 		"path": "pages/show/people/index",
 		"style": {
-			"navigationBarTitleText": "先锋人物"
+			"navigationBarTitleText": "Show People"
 		}
 	}, {
 		"path": "pages/show/people/detail/index",
 		"style": {
-			"navigationBarTitleText": "先锋人物详情"
+			"navigationBarTitleText": "Show People Detail"
 		}
 	}],
 	"globalStyle": {

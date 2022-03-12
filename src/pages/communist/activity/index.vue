@@ -1,19 +1,6 @@
 <template>
   <view class="flex flex-col g_p_10">
-    <view class="flex bg-gray-100 text-sm text-gray-300 rounded g_p_10" style="margin: 20rpx;">
-      <view class="g_ml_15" @click="open">活动类型</view>
-      <uni-icons type="bottom" size="15" color="#D1D5DB"></uni-icons>
-      <view class="g_ml_15">|</view>
-      <input
-        class="text-black g_ml_15"
-        v-model="state.value"
-        placeholder="输入关键词搜索"
-        placeholder-class="text-sm text-gray-300"
-        style="width: 450rpx;"
-        @confirm="search"
-      />
-      <uni-icons type="search" size="20" color="#D1D5DB" class="my-auto" @click="search"></uni-icons>
-    </view>
+    <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
     <uni-popup ref="popup" type="bottom">
       <picker @change="change" :value="state.type" :range="state.types">
         <view>{{ state.types[state.type] }}</view>

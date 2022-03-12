@@ -2,18 +2,18 @@
   <view class="flex flex-col shadow-md g_box g_mt_15">
     <view class="flex bg-gradient-to-r from-blue-200 to-white g_p_10">
       <uni-icons type="home-filled" size="25"></uni-icons>
-      <view class="my-auto g_text_30 g_ml_15">便民热线</view>
+      <view class="my-auto g_text_30 g_ml_15">Hotline</view>
     </view>
     <view class="flex flex-col">
       <ContactItem v-for="item in state.data" :key="item.id" :item="item" />
     </view>
   </view>
-  <view class="g_jump_full">事项上报</view>
+  <view class="g_jump_full">Report</view>
   <view class="flex flex-col shadow-md g_box g_mt_15">
     <view class="flex bg-gradient-to-r from-blue-200 to-white g_p_10">
       <uni-icons type="home-filled" size="25"></uni-icons>
-      <view class="my-auto g_text_30 g_ml_15" style="width: 480rpx;">你问我答</view>
-      <view class="my-auto text-gray-400 g_text_25">查看更多</view>
+      <view class="my-auto g_text_30 g_ml_15" style="width: 480rpx;">Q & A</view>
+      <view class="my-auto text-gray-400 g_text_25">More</view>
     </view>
     <uni-search-bar :value="state.value" placeholder="输入关键词搜索" @confirm="search"></uni-search-bar>
     <CommentList :data="state.comments" />

@@ -1,13 +1,13 @@
 <template>
   <view class="flex flex-col g_box g_mt_15">
-    <view class="g_jump_full">党建品牌</view>
+    <view class="g_jump_full">Brand</view>
     <view class="flex">
-      <view class="g_jump_half" @click="toActivity">党建活动</view>
-      <view class="g_jump_half g_ml_15">学而时习</view>
+      <view class="g_jump_half" @click="toActivity">Activity</view>
+      <view class="g_jump_half g_ml_15">Study</view>
     </view>
     <view class="flex">
-      <view class="g_jump_half" @click="toFriend">党建朋友圈</view>
-      <view class="g_jump_half g_ml_15">党建地图</view>
+      <view class="g_jump_half" @click="toFriend">Friend</view>
+      <view class="g_jump_half g_ml_15">Map</view>
     </view>
   </view>
 </template>
